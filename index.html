@@ -1,58 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Flash</title>
-    <link 
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" 
-        rel="stylesheet" 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
     />
-    <link 
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet"
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
     />
-    <link 
-        rel="stylesheet" 
-        href="./css/mobile.css"
-    />
-</head>
-<body>
+    <link rel="stylesheet" href="./css/desktop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)" />
+  </head>
+  <body>
     <header>
-        <div class="automatic-slider">
-            <ul>
-                <li><img src="/assets/images/first.jpg" alt=""></li>
-                <li><img src="/assets/images/second.jpg" alt=""></li>
-                <li><img src="/assets/images/third.jpg" alt=""></li>
-                <li><img src="/assets/images/fourth.jpg" alt=""></li>
-                <li><img src="/assets/images/fifth.jpg" alt=""></li>
-                <li><img src="/assets/images/sixth.jpg" alt=""></li>
-                <li><img src="/assets/images/seventh.jpg" alt=""></li>
-                <li><img src="/assets/images/eighth.jpg" alt=""></li>
-            </ul>
-        </div>
-        <div class="main-menu">
-        <input type="checkbox" id="menu-btn">
+      <div class="automatic-slider">
+        <ul>
+          <li><img src="/assets/images/first.jpg" alt="" /></li>
+          <li><img src="/assets/images/second.jpg" alt="" /></li>
+          <li><img src="/assets/images/third.jpg" alt="" /></li>
+          <li><img src="/assets/images/fourth.jpg" alt="" /></li>
+          <li><img src="/assets/images/fifth.jpg" alt="" /></li>
+          <li><img src="/assets/images/sixth.jpg" alt="" /></li>
+          <li><img src="/assets/images/seventh.jpg" alt="" /></li>
+          <li><img src="/assets/images/eighth.jpg" alt="" /></li>
+        </ul>
+      </div>
+      <div class="main-menu">
+        <input type="checkbox" id="menu-btn" />
         <label for="menu-btn">
-            <i class="material-icons burger-menu">
-                menu
-            </i>
+          <i class="material-icons burger-menu"> menu </i>
         </label>
         <nav class="nav-bar" id="nav-bar">
-            <ul class="options" id="options">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Descripción</a></li>
-                <li><a href="#">Episodios</a></li>
-                <li><a href="#">Personajes</a></li>
-                <li><a href="#">Síguenos</a></li>
-            </ul>
+          <ul class="options" id="options">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Descripción</a></li>
+            <li><a href="#">Episodios</a></li>
+            <li><a href="#">Personajes</a></li>
+            <li><a href="#">Síguenos</a></li>
+          </ul>
         </nav>
-        </div>
-        <div class="logo">
-            <img src="./assets/images/logo.png" alt="" />
-        </div>
+      </div>
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="" />
+      </div>
     </header>
-    <script src="./js/scroll.js"></script>
-</body>
+    <div class="degrade"></div>
+    <main>
+      <section class="description">
+        <h2>Descripción</h2>
+        <div>
+          <p>
+            Barry Allen tenía tan solo once años cuando su madre falleció en un
+            incidente bizarro y aterrador, momento en que su padre fue acusado
+            injustamente de asesinato. Con su vida cambiada para siempre por la
+            tragedia, Barry fue acogido y criado por el detective Joe West,
+            padre de la mejor amiga de Barry, Iris. En la actualidad, Barry es
+            un brillante investigador forense cuya determinación para descubrir
+            la verdad acerca de la muerte de su madre le ha llevado a prestar
+            atención a todo tipo de leyendas urbanas y avances científicos.
+          </p>
+          <br />
+          <div id="more-text">
+            <p>
+              La obsesión más reciente de Barry es un acelerador de partículas
+              creado por el físico visionario Harrison Wells y los miembros de
+              su equipo de S.T.A.R. Labs, Caitlin Snow y Cisco Ramon, que
+              afirman que el invento supondrá avances inimaginables en energía y
+              en medicina. Sin embargo, algo va extremadamente mal durante la
+              muestra pública y una explosión devastadora causa una peculiar
+              tormenta en la que mueren muchas personas y Barry es alcanzado por
+              un rayo.
+            </p>
+            <br />
+            <p>
+              Después de nueve meses en estado de coma, Barry despierta y
+              descubre que su vida ha cambiado una vez más – el accidente le ha
+              otorgado una habilidad de supervelocidad, permitiéndole
+              desplazarse por Central City como un ángel guardián. A Barry le
+              sorprende descubrir que no es el único "meta-humano" creado por la
+              explosión del acelerador - y no todos están utilizando sus nuevos
+              poderes para hacer el bien. En los meses posteriores al accidente,
+              la ciudad ha tenido un aumento de personas desaparecidas, muertes
+              inexplicables y otros fenómenos peculiares. Barry tiene un nuevo
+              propósito - utilizar su velocidad para proteger a los inocentes,
+              sin dejar de lado su objetivo de resolver el asesinato de su madre
+              y limpiar el nombre de su padre. Al principio, solo amigos
+              cercanos y asociados saben que Barry es el hombre más veloz del
+              mundo, pero el mundo no tardará en descubrir en qué se ha
+              convertido. Flash.
+            </p>
+          </div>
+        </div>
+        <button id="btn-see-more" onclick="seeMore();">
+          <i class="material-icons"> add_circle_outline </i>
+          Ver más
+        </button>
+      </section>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
