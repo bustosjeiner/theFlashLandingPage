@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Flash</title>
     <link 
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&display=swap" 
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" 
         rel="stylesheet" 
+    />
+    <link 
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
     />
     <link 
         rel="stylesheet" 
@@ -15,17 +19,8 @@
     />
 </head>
 <body>
-    <header class="header-container">
-        <!--nav class="header-container__headermain-menu">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Descripción</a></li>
-                <li><a href="#">Episodios</a></li>
-                <li><a href="#">Personajes</a></li>
-                <li><a href="#">Síguenos</a></li>
-            </ul>
-        </#nav-->
-        <div class="header-container__automatic-slider">
+    <header>
+        <div class="automatic-slider">
             <ul>
                 <li><img src="/assets/images/first.jpg" alt=""></li>
                 <li><img src="/assets/images/second.jpg" alt=""></li>
@@ -37,6 +32,27 @@
                 <li><img src="/assets/images/eighth.jpg" alt=""></li>
             </ul>
         </div>
+        <div class="main-menu">
+        <input type="checkbox" id="menu-btn">
+        <label for="menu-btn">
+            <i class="material-icons burger-menu">
+                menu
+            </i>
+        </label>
+        <nav class="nav-bar" id="nav-bar">
+            <ul class="options" id="options">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Descripción</a></li>
+                <li><a href="#">Episodios</a></li>
+                <li><a href="#">Personajes</a></li>
+                <li><a href="#">Síguenos</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="" />
+        </div>
     </header>
+    <script src="./js/scroll.js"></script>
 </body>
 </html>
