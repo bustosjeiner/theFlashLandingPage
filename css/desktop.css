@@ -6,9 +6,9 @@
     --red-color: #DF383C;
     --yellow-color: #F0C265;
     --title-font: 3rem;
-    --subtitle-font: 2.7rem;
-    --text-font: 2.4rem;
-    --options-font: 2rem;
+    --subtitle-font: 2.3rem;
+    --text-font: 2rem;
+    --options-font: 1.6rem;
 }
 * {
   box-sizing: border-box;
@@ -34,6 +34,16 @@ li {
 a {
     text-decoration: none;
 }
+p {
+    font-size: var(--text-font);
+    color: var(--texts);
+}
+h2 {
+    padding-bottom: 35px;
+    font-size: var(--subtitle-font);
+    font-weight: bold;
+    color: var(--subtitles);
+}
 .automatic-slider {
     width: 100%;
     overflow: hidden;
@@ -41,7 +51,6 @@ a {
 .automatic-slider ul {
     display: flex;
     width: 800%;
-    animation: slider 20s infinite;
 }
 .automatic-slider li {
     width: 100%;
@@ -110,8 +119,8 @@ header label :hover {
 .degrade {
     position: absolute;
     width: 100%;
-    height: 200px;
-    bottom: 150px;
+    height: 100px;
+    bottom: 0;
     background: linear-gradient(
         180deg, rgba(63, 8, 8, 0) 0%,
         var(--main-color) 50%);
@@ -123,17 +132,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 20px;
-}
-.description h2 {
-    padding: 35px 0;
-    font-size: var(--subtitle-font);
-    font-weight: bold;
-    color: var(--subtitles);
-}
-.description p {
-    font-size: var(--text-font);
-    color: var(--texts);
+    padding: 0 20px 35px 20px;
 }
 #more-text {
     display: none;
@@ -151,10 +150,49 @@ main {
     vertical-align: bottom;
     padding-right: 10px;
 }
+.trailer {
+    width: 100%;
+    padding: 0 20px 35px 20px;
+}
+.trailer-slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.trailer__season {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 40px;
+    left: 0;  
+    background-color: var(--main-color);  
+    opacity: 0;
+    transition: all 0.3s;
+}
+.trailer__season iframe {
+    margin: auto;
+    min-height: 300px;
+    max-height: 700px;
+    padding: 30px 0;
+}
+.trailer-slider .btn-season {
+    display: block;
+    padding: 0 15px;
+    color: var(--white-color);
+    font-size: var(--options-font);
+}
+.trailer-slider input[type="radio"]{
+    display: none;
+}
+.trailer-slider input[type="radio"]:checked ~ div {
+    opacity: 1;
+}
 /*
 nav ul {
     position: absolute;
-    width: 100%;
+    width: 100%;<<<<<<<<<<<<<<<<<<
     top: 65px;
     list-style: none;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -198,16 +236,4 @@ nav ul .opciones li a:hover {
     background-color: var(--yellow-color);
     color: var(--main-color);
 }
-@keyframes slider {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100;}
-    45% {margin-left: -100;}
-
-    50% {margin-left: -200;}
-    70% {margin-left: -200;}
-
-    75% {margin-left: -300;}
-    95% {margin-left: -300;}
-}*/
+*/
